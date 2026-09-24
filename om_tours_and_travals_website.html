@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OM Tours and Travals | Chhuikhadan</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f6f7fb;color:#172033}
+header{background:#111827;color:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:5}
+.logo{font-size:25px;font-weight:800}.call{background:#16a34a;color:#fff;padding:11px 17px;border-radius:30px;text-decoration:none;font-weight:700}
+.hero{padding:65px 6%;background:linear-gradient(135deg,#0f172a,#334155);color:white;text-align:center}
+.hero h1{font-size:42px;margin:0 0 12px}.hero p{font-size:18px;margin:8px 0 25px}
+.btn{display:inline-block;padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:700;margin:5px}.primary{background:#f59e0b;color:#111}.green{background:#16a34a;color:white}
+section{padding:42px 6%;max-width:1100px;margin:auto}h2{text-align:center;font-size:30px;margin-bottom:25px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}.card{background:white;padding:24px;border-radius:14px;box-shadow:0 5px 20px #00000012}.card h3{margin-top:0}
+form{background:white;padding:25px;border-radius:15px;box-shadow:0 5px 20px #00000012;max-width:700px;margin:auto}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}input,select,textarea{width:100%;padding:13px;border:1px solid #d1d5db;border-radius:8px;font-size:15px}textarea{min-height:90px}.full{grid-column:1/-1}button{width:100%;border:0;padding:14px;background:#16a34a;color:white;border-radius:8px;font-size:17px;font-weight:700;cursor:pointer}
+.contact{text-align:center;background:#111827;color:white;max-width:none}.contact a{color:#fff}
+footer{text-align:center;padding:20px;background:#0b1120;color:#cbd5e1}
+@media(max-width:600px){.hero h1{font-size:32px}.grid{grid-template-columns:1fr}.full{grid-column:auto}header{padding:14px 4%}.logo{font-size:20px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">OM Tours and Travals</div>
+  <a class="call" href="tel:9179733313">📞 Call</a>
+</header>
+
+<div class="hero">
+  <h1>OM Tours and Travals</h1>
+  <p>आपकी यात्रा, हमारी जिम्मेदारी</p>
+  <p>📍 Chhuikhadan, Jila – KCG</p>
+  <a class="btn primary" href="#booking">Online Booking</a>
+  <a class="btn green" href="https://wa.me/919179733313?text=Namaste%20OM%20Tours%20and%20Travals%2C%20mujhe%20booking%20ki%20jankari%20chahiye.">WhatsApp Booking</a>
+</div>
+
+<section>
+<h2>हमारी सेवाएँ</h2>
+<div class="cards">
+<div class="card"><h3>🚗 Car Booking</h3><p>स्थानीय और बाहर की यात्रा के लिए वाहन बुक करें।</p></div>
+<div class="card"><h3>🚌 Bus Booking</h3><p>Sleeper और Seater Bus booking की सुविधा।</p></div>
+<div class="card"><h3>🛕 धार्मिक यात्रा</h3><p>प्रमुख धार्मिक एवं पर्यटन स्थलों के लिए यात्रा योजना।</p></div>
+<div class="card"><h3>👨‍👩‍👧‍👦 Family Tours</h3><p>परिवार और ग्रुप के लिए यात्रा व्यवस्था।</p></div>
+</div>
+</section>
+
+<section id="booking">
+<h2>Online Booking / Enquiry</h2>
+<form onsubmit="sendBooking(event)">
+<div class="grid">
+<input id="name" placeholder="आपका नाम" required>
+<input id="phone" placeholder="मोबाइल नंबर" type="tel" required>
+<input id="from" placeholder="कहाँ से" required>
+<input id="to" placeholder="कहाँ तक" required>
+<input id="date" type="date" required>
+<select id="vehicle"><option>वाहन चुनें</option><option>Black Ertiga Hybrid</option><option>Seater Bus</option><option>Sleeper Bus</option><option>अन्य</option></select>
+<input id="people" type="number" min="1" placeholder="यात्री संख्या">
+<textarea id="message" class="full" placeholder="अतिरिक्त जानकारी"></textarea>
+<div class="full"><button type="submit">WhatsApp पर Booking भेजें</button></div>
+</div>
+</form>
+</section>
+
+<section>
+<h2>हमसे संपर्क करें</h2>
+<div class="cards">
+<div class="card"><h3>📞 मोबाइल</h3><p><a href="tel:9179733313">9179733313</a></p></div>
+<div class="card"><h3>📍 पता</h3><p>Chhuikhadan, Jila – KCG</p></div>
+<div class="card"><h3>⭐ Reviews</h3><p>ग्राहकों से Google Review प्राप्त करें और अपना भरोसा बढ़ाएँ।</p></div>
+</div>
+</section>
+
+<div class="contact">
+<h2>OM Tours and Travals</h2>
+<p>Chhuikhadan (KCG)</p>
+<p><a href="tel:9179733313">9179733313</a></p>
+</div>
+<footer>© 2026 OM Tours and Travals. All Rights Reserved.</footer>
+
+<script>
+function sendBooking(e){
+ e.preventDefault();
+ const v=id=>document.getElementById(id).value;
+ const text=`नमस्ते OM Tours and Travals,%0A%0A*Online Booking Request*%0Aनाम: ${v('name')}%0Aमोबाइल: ${v('phone')}%0Aकहाँ से: ${v('from')}%0Aकहाँ तक: ${v('to')}%0Aतारीख: ${v('date')}%0Aवाहन: ${v('vehicle')}%0Aयात्री: ${v('people')}%0Aजानकारी: ${v('message')}`;
+ window.open('https://wa.me/919179733313?text='+text,'_blank');
+}
+</script>
+</body>
+</html>
